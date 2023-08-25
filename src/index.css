@@ -29,6 +29,7 @@ header {
   place-items: center;
   font-size: 1.1rem;
   font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 header * {
@@ -37,4 +38,5 @@ header * {
   padding: 10px 40px;
   margin: 0;
   color: white;
+  outline: 2px solid var(--color-gamma);
 }
