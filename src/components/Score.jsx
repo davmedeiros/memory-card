@@ -1,13 +1,7 @@
-import { useState } from 'react';
-
-const Score = ({ points }) => {
-  const [score, setScore] = useState(0);
-
-  setScore(score + points);
-
+const Score = ({ points = 0 }) => {
   return (
     <>
-      <p>Score: {score}</p>
+      <p>Score: {points}</p>
     </>
   );
 };
