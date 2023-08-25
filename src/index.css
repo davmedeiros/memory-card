@@ -17,3 +17,24 @@
   --color-psi: #00bbf9;
   --color-omega: #00f5d4;
 }
+
+#root {
+  display: grid;
+  grid-template-rows: 55px 1fr;
+}
+
+header {
+  background-color: var(--color-omega);
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+header * {
+  background-color: var(--color-beta);
+  border-radius: 16px;
+  padding: 10px 40px;
+  margin: 0;
+  color: white;
+}
