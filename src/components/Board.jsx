@@ -1,21 +1,22 @@
 import Card from './Card';
 
-const LoadRandomCard = () => {
+const LoadRandomCards = ({ numberOfCards = 1 }) => {
   const MAX = 150;
   const MIN = 1;
-  const id = Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
+  const cards = [];
 
-  return (
-    <>
-      <Card id={id} />
-    </>
-  );
+  for (let i = 0; i < numberOfCards; i++) {
+    const id = Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
+    cards.push(<Card id={id} key={id} />);
+  }
+
+  return <>{cards}</>;
 };
 
 const Board = () => {
   return (
     <div className="board">
-      <LoadRandomCard />
+      <LoadRandomCards numberOfCards={12} />
     </div>
   );
 };
