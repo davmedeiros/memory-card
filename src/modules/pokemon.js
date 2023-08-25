@@ -6,7 +6,8 @@ const fetchPokemon = async (id) => {
 
 const Pokemon = async (id) => {
   const pokemon = await fetchPokemon(id);
-  const name = await pokemon.name;
+  const name =
+    (await pokemon.name.charAt(0).toUpperCase()) + pokemon.name.slice(1);
   const spriteUrl = await pokemon.sprites.other.dream_world.front_default;
 
   return { id, name, spriteUrl };
