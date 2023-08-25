@@ -1,7 +1,7 @@
 import Card from './Card';
 import '../styles/Board.css';
 
-const LoadRandomCards = ({ numberOfCards = 1 }) => {
+const LoadRandomCards = ({ numberOfCards = 1, clickEvent }) => {
   const MAX = 150;
   const MIN = 1;
   const cards = [];
@@ -13,7 +13,7 @@ const LoadRandomCards = ({ numberOfCards = 1 }) => {
     if (isDuplicated && cards.length < MAX) {
       i -= 1;
     } else {
-      cards.push(<Card id={id} key={id} />);
+      cards.push(<Card key={id} id={id} clickEvent={clickEvent} />);
     }
   }
 

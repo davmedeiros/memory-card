@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Pokemon from '../modules/pokemon';
 import '../styles/Card.css';
 
-const Card = ({ id }) => {
+const Card = ({ id, clickEvent }) => {
   const [pokemon, setPokemon] = useState('');
 
   useEffect(() => {
@@ -13,7 +13,7 @@ const Card = ({ id }) => {
   }, [id]);
 
   return (
-    <div className="card" key={pokemon.id}>
+    <div className="card" key={pokemon.id} onClick={clickEvent}>
       <div className="sprite-container">
         <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </div>
