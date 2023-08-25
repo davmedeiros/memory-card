@@ -3,6 +3,7 @@
   background-color: var(--color-alpha);
   display: grid;
   grid-template-rows: 1fr 100px;
+  border-radius: 16px;
 }
 
 .sprite-container {
@@ -15,4 +16,8 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+
+.name {
+  justify-self: center;
 }
