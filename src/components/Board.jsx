@@ -8,7 +8,6 @@ const LoadRandomCards = ({ numberOfCards = 1 }) => {
 
   for (let i = 0; i < numberOfCards; i++) {
     const id = Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
-
     const isDuplicated = cards.some((key) => key.key === id.toString());
 
     if (isDuplicated && cards.length < MAX) {
