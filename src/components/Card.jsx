@@ -12,8 +12,12 @@ const Card = ({ id, clickEvent }) => {
     loadPokemonData();
   }, [id]);
 
+  const handleClick = () => {
+    clickEvent(id);
+  };
+
   return (
-    <div className="card" key={pokemon.id} onClick={clickEvent}>
+    <div className="card" key={pokemon.id} onClick={handleClick}>
       <div className="sprite-container">
         <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </div>

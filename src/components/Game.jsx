@@ -4,6 +4,17 @@ import Board from './Board';
 
 const Game = () => {
   const [score, setScore] = useState(0);
+  const [clickedCardIds, setClickedCardIds] = useState([]);
+
+  const playRound = (id) => {
+    if (clickedCardIds.includes(id)) {
+      setScore(0);
+      clickedCardIds.length = 0;
+    } else {
+      setClickedCardIds([...clickedCardIds, id]);
+      setScore(score + 1);
+    }
+  };
 
   return (
     <>
@@ -11,11 +22,7 @@ const Game = () => {
         <ScorePanel score={score} />
       </header>
       <main>
-        <Board
-          clickEvent={() => {
-            setScore(score + 1);
-          }}
-        />
+        <Board clickEvent={playRound} />
       </main>
     </>
   );
