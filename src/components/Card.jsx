@@ -5,7 +5,6 @@ const Card = ({ id }) => {
   const [pokemon, setPokemon] = useState('');
 
   useEffect(() => {
-    console.log('load'); // LOGGING: Remove when implemented
     const loadPokemonData = async () => {
       setPokemon(await Pokemon(id));
     };

@@ -16,7 +16,7 @@ const LoadRandomCards = ({ numberOfCards = 1 }) => {
 const Board = () => {
   return (
     <div className="board">
-      <LoadRandomCards numberOfCards={12} />
+      <LoadRandomCards numberOfCards={1} />
     </div>
   );
 };
