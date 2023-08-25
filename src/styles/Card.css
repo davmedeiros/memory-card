@@ -1,4 +1,18 @@
 .card {
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
   background-color: var(--color-alpha);
+  display: grid;
+  grid-template-rows: 1fr 100px;
+}
+
+.sprite-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.sprite-container > img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
