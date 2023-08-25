@@ -3,9 +3,13 @@ import { useState } from 'react';
 const Score = () => {
   const [points, setPoints] = useState(0);
 
+  const handleOnClick = () => {
+    setPoints(points + 1);
+  };
+
   return (
     <>
-      <p>Score: {points}</p>
+      <p onClick={handleOnClick}>Score: {points}</p>
     </>
   );
 };
