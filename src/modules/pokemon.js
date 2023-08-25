@@ -4,6 +4,12 @@ const fetchPokemon = async (id) => {
   return pokemon;
 };
 
-const Pokemon = async (id, name, sprite) => {
-  return { id, name, sprite };
+const Pokemon = async (id) => {
+  const pokemon = await fetchPokemon(id);
+  const name = await pokemon.name;
+  const spriteUrl = await pokemon.sprites.other.dream_world.front_default;
+
+  return { id, name, spriteUrl };
 };
+
+export default Pokemon;
