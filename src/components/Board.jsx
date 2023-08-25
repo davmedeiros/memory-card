@@ -1,4 +1,5 @@
 import Card from './Card';
+import '../styles/Board.css';
 
 const LoadRandomCards = ({ numberOfCards = 1 }) => {
   const MAX = 150;
@@ -16,7 +17,7 @@ const LoadRandomCards = ({ numberOfCards = 1 }) => {
 const Board = () => {
   return (
     <div className="board">
-      <LoadRandomCards numberOfCards={1} />
+      <LoadRandomCards numberOfCards={12} />
     </div>
   );
 };

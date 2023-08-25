@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import Pokemon from '../modules/pokemon';
+import '../styles/Card.css';
 
 const Card = ({ id }) => {
   const [pokemon, setPokemon] = useState('');
