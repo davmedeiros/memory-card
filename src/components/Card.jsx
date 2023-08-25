@@ -1,10 +1,23 @@
-const Card = ({ id, name, spriteUrl }) => {
+import { useEffect, useState } from 'react';
+import Pokemon from '../modules/pokemon';
+
+const Card = ({ id }) => {
+  const [pokemon, setPokemon] = useState('');
+
+  useEffect(() => {
+    console.log('load'); // LOGGING: Remove when implemented
+    const loadPokemonData = async () => {
+      setPokemon(await Pokemon(id));
+    };
+    loadPokemonData();
+  }, [id]);
+
   return (
-    <div className="card" key={id}>
+    <div className="card" key={pokemon.id}>
       <div className="sprite-container">
-        <img src={spriteUrl} alt={name} />
+        <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </div>
-      <h2 className="name">{name}</h2>
+      <h2 className="name">{pokemon.name}</h2>
     </div>
   );
 };

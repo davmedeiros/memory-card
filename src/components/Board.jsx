@@ -1,7 +1,9 @@
+import Card from './Card';
+
 const Board = () => {
   return (
     <div className="board">
-      <p>test</p>
+      <Card id={1} />
     </div>
   );
 };
