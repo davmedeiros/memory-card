@@ -20,10 +20,10 @@ const LoadRandomCards = ({ numberOfCards = 1, clickEvent }) => {
   return <>{cards}</>;
 };
 
-const Board = () => {
+const Board = ({ clickEvent }) => {
   return (
     <div className="board">
-      <LoadRandomCards numberOfCards={12} />
+      <LoadRandomCards numberOfCards={12} clickEvent={clickEvent} />
     </div>
   );
 };
