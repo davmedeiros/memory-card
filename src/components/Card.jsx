@@ -17,7 +17,9 @@ const Card = ({ id }) => {
       <div className="sprite-container">
         <img src={pokemon.spriteUrl} alt={pokemon.name} />
       </div>
-      <h2 className="name">{pokemon.name}</h2>
+      <div className="details">
+        <h2 className="name">{pokemon.name}</h2>
+      </div>
     </div>
   );
 };
